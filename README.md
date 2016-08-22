@@ -1,5 +1,5 @@
 #perfect-xiShuaShua
-[![Build Status](https://travis-ci.org/michaelliao/openweixin.svg?branch=master)](https://travis-ci.org/michaelliao/openweixin)
+[![Build Status](https://travis-ci.org/michaelliao/openweixin.svg?branch=master)](https://github.com/xiShuaShua/perfect-xiShuaShua)
 
 #一个解决洗澡困难的App
 
