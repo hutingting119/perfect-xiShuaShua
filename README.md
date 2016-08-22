@@ -3,7 +3,7 @@
 
 #一个解决洗澡困难的App
 
-请按以下步骤运行：
+#请按以下步骤运行：
 
 ```
 1. git clone git@github.com:sunset-red/new-sunset-red.git
@@ -20,6 +20,7 @@
 #测试
 
 npm test
+
 ```
 ```
 
