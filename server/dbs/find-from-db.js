@@ -5,7 +5,7 @@ function findData(callback) {
   MongoClient.connect(url, function (err, db) {
     const collection = db.collection('rooms');
     collection.find({}).toArray(function (err, result) {
-      callback(result[0].hello);
+      callback(result[0]._id);
     });
   });
 }

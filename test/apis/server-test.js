@@ -7,8 +7,10 @@ describe('server', () => {
 
   beforeEach(function () {
     mongoClient.connect(url, (err, db)=> {
-      const collection = db.collection('hello');
-      collection.insert([{hello: "world"}], (err, result)=> {
+      const collection = db.collection('rooms');
+      collection.insert([{ "_id" : 1, "room" : [ { "time" : "17:00-18:00", "state" : "0" }, { "time" : "18:00-19:00", "state" : "0" }, { "time" : "19:00-20:00", "state" : "0" },
+        { "time" : "20:00-21:00", "state" : "0" }, { "time" : "21:00-22:00", "state" : "0" } ] }],
+        (err, result)=> {
       });
       db.close();
     });
@@ -17,16 +19,16 @@ describe('server', () => {
 
   afterEach(function () {
     mongoClient.connect(url, (err, db)=> {
-      const collection = db.collection('hello');
+      const collection = db.collection('rooms');
       collection.removeMany({});
       db.close();
     })
   });
 
-  it('responds to /hello', function testSlash() {
+  it('responds to /rooms', function testSlash() {
     request(server)
-      .get('/hello')
-      .expect(200, '"world"');
+      .get('/rooms')
+      .expect(200, '[{ "_id" : 1, "room" : [ { "time" : "17:00-18:00", "state" : "1" }, { "time" : "18:00-19:00", "state" : "1" }, { "time" : "19:00-20:00", "state" : "1" }, { "time" : "20:00-21:00", "state" : "1" }, { "time" : "21:00-22:00", "state" : "1" } ] }]');
 
   });
 
