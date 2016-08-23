@@ -1,0 +1,11 @@
+.header {
+  height: 50px;
+  background-color:deepskyblue;
+  color: #ffffff;
+  font-size: 1.2em;
+}
+.header span {
+  line-height: 50px;
+}
+
+
