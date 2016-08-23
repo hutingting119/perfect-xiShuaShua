@@ -7,8 +7,8 @@ describe('server', () => {
 
   beforeEach(function () {
     mongoClient.connect(url, (err, db)=> {
-      const collection = db.collection('hello');
-      collection.insert([{hello: "world"}], (err, result)=> {
+      const collection = db.collection('users');
+      collection.insert([{'name':'guoru','password':'123456'}], (err, result)=> {
       });
       db.close();
     });
@@ -17,16 +17,16 @@ describe('server', () => {
 
   afterEach(function () {
     mongoClient.connect(url, (err, db)=> {
-      const collection = db.collection('hello');
+      const collection = db.collection('users');
       collection.removeMany({});
       db.close();
     })
   });
 
-  it('responds to /hello', function testSlash() {
+  it('responds to /users', function testSlash() {
     request(server)
-      .get('/hello')
-      .expect(200, '"world"');
+      .get('/users')
+      .expect(200, [{'name':'guoru','password':'123456'}]);
 
   });
 
