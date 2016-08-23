@@ -24,7 +24,7 @@ class Register extends Component {
             </div>
             <div className="password">
               <label>
-                <input type="pasword" placeholder="密码" className="form-control myPassword"/>
+                <input type="password" placeholder="密码" className="form-control myPassword"/>
               </label>
             </div>
             <div className="repeatPassword">
