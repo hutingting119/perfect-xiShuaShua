@@ -1,11 +1,36 @@
+body {
+  overflow-x: hidden;
+}
 .header {
   height: 50px;
-  background-color:deepskyblue;
+  background-color: deepskyblue;
   color: #ffffff;
   font-size: 1.2em;
 }
+
 .header span {
   line-height: 50px;
+}
+
+.register {
+  margin-top: 40px;
+}
+
+.registerFont{
+  color: #31b0d5;
+  margin-top: 40px;
+  font-style: italic;
+}
+
+.email, .password, .repeatPassword {
+  margin-top: 10px
+}
+
+.myUsers,.myEmail,.myPassword,.myRepeatPassword,.registerButton {
+  width: 250px;
+}
+.hasAccount{
+  margin-top: 10px;
 }
 
 
