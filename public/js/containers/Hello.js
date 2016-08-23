@@ -3,20 +3,20 @@ import {connect} from "react-redux";
 import Value from "../components/Hello";
 
 Value.propTypes = {
-  value: PropTypes.string.isRequired,
+  _id: PropTypes.number.isRequired,
   onGet: PropTypes.func.isRequired
 };
 
 const mapStateToProps = (state)=> {
   return {
-    value: state.value
+    "_id": state._id
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
     onGet: ()=> {
-      dispatch({type: "GETTVALUE"});
+      dispatch({type: "GETALL"});
     }
   };
 };

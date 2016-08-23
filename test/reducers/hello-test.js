@@ -3,9 +3,9 @@ const expect = require('chai').expect;
 
 describe('reducer', function () {
   it('get', function () {
-    const state = {value: ''};
-    const action = {type: "GETTVALUE", value: 'world'};
-    expect(reducer(state, action)).to.be.deep.equal({value: 'world'});
+    const state = {"_id": 0};
+    const action = {type: "GETALL", "_id":1};
+    expect(reducer(state, action)).to.be.deep.equal({"_id":1});
   });
 });
 

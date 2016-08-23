@@ -4,7 +4,7 @@ const express = require('express');
 
 const router = express.Router();
 
-router.get('/hello', (req, res)=> {
+router.get('/rooms', (req, res)=> {
   findData((result) => {
     res.json(result);
   });
