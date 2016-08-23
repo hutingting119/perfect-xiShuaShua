@@ -4,11 +4,10 @@ import {createStore, applyMiddleware} from 'redux';
 import {Provider} from "react-redux";
 import {Router, Route, IndexRoute, hashHistory} from 'react-router';
 import App from "./containers/App";
-import Hello from './containers/Hello';
 import reducer from "./reducers/reducer";
-import getValue from "./middlewares/get-value";
+import register from './middlewares/register-middle';
 
-const createStoreWithMiddleware = applyMiddleware(getValue)(createStore);
+const createStoreWithMiddleware = applyMiddleware(register)(createStore);
 
 const store = createStoreWithMiddleware(reducer);
 
@@ -16,7 +15,6 @@ render(
   <Provider store={store}>
     <Router history={hashHistory}>
       <Route path="/" component={App}>
-        <IndexRoute component={Hello}/>
       </Route>
     </Router>
   </Provider>, document.getElementById('app'));

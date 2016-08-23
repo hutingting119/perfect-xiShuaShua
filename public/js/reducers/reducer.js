@@ -1,11 +1,10 @@
-function reducer(state = {value:''}, action) {
-  switch(action.type){
-    case "GETTVALUE":
-      return {
-        value : action.value
-      };
-  }
+function reducer(state = {value: ''}, action) {
+  switch (action.type) {
+    case 'REGIST': {
+      alert(action.status);
+      }
+    }
+
   return state;
 }
-
-module.exports = reducer;
+  module.exports = reducer;
