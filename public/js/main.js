@@ -14,7 +14,7 @@ import getBest from "./middlewares/getBest-middle";
 import register from './middlewares/register-middle';
 
 // const createStoreWithMiddleware = applyMiddleware(getBest)(createStore);
-const store = createStoreWithMiddleware(reducer); 
+const store = createStoreWithMiddleware(reducer);
 
 
 render(
