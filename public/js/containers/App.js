@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import ReserveRooms from "./ReserveRoom"
 import Header from "../components/Header";
-import BestCommend from "../containers/bestRecommend";
+import BestCommend from "./BestRecommend";
 import Login from '../components/login';
 
 class App extends Component {

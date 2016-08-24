@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 
 const app = new express();
 
-const bestRecommend = require('./server/routers/best-recommend');
+const bestRecommend = require('./server/routers/best-recommend-router');
 const insertUsers = require('./server/routers/register-router');
 const reserveRoom = require('./server/routers/reserve-room');
 
