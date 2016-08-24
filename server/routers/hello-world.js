@@ -11,3 +11,4 @@ router.get('/rooms', (req, res)=> {
 });
 
 module.exports = router;
+

@@ -1,4 +1,4 @@
-const findBestRoom = require('../dbs/find-best-db');
+const findBestRoom = require('../dbs/find-from-db');
 
 const express = require('express');
 
@@ -28,7 +28,6 @@ router.get('/rooms', (req, res)=> {
         }
       }
       const bestRoom={id:canRecommends[0].id,time:canRecommends[0].time};
-
     res.json(bestRoom);
   });
 });
