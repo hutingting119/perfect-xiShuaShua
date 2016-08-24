@@ -20,7 +20,6 @@ class RoomsList extends React.Component {
 
     render() {
         const data = this.props.rooms;
-        console.log(data);
         return <div className="row">
             <div className="row my-bg my-write my-bottom my-height">
                 <h4 className="col-xs-6 text-center">房间号</h4>

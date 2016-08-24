@@ -12,9 +12,8 @@ const mapDispatchToProps = (dispatch) => {
 
   return {
     onGetRooms:(text) => {
-      console.log('dispatch');
       dispatch({
-        type : "GETABLEROOMS",
+        type : "GET_ABLE_ROOMS",
         text
       })
 

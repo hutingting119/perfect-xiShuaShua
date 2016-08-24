@@ -4,12 +4,24 @@ const mongoClient = require('../../server/helpers/mongodb');
 
 describe('server', () => {
   let server;
-  beforeEach(function () {
+
+  beforeEach(function (done) {
     mongoClient.connect(url, (err, db)=> {
-      const collection = db.collection('users');
-      collection.insert([{'name': 'guoru', 'password': '123456'}], (err, result)=> {
+      const collection = db.collection('rooms');
+      collection.removeMany({}, ()=> {
+        collection.insert([{
+            "_id": 1, "timePeriod": [{"time": "17:00-18:00", "state": "0"},
+              {"time": "18:00-19:00", "state": "0"},
+              {"time": "19:00-20:00", "state": "0"},
+              {"time": "20:00-21:00", "state": "0"},
+              {"time": "21:00-22:00", "state": "0"}]
+          }
+          ],
+          (err, result)=> {
+            db.close();
+            done();
+          });
       });
-      db.close();
     });
 
     afterEach(function () {
@@ -19,12 +31,5 @@ describe('server', () => {
         db.close();
       })
     });
-
-    it('responds to /hello', function testSlash() {
-      request(server)
-        .get('/hello')
-        .expect(200, '"world"');
-
-    });
   })
-})
+});

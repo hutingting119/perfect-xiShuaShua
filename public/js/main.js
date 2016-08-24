@@ -10,7 +10,11 @@ import ReserveRoom from "./components/ReserveRoom";
 import getRoomsInfo from "./middlewares/get-rooms-info"
 
 const createStoreWithMiddleware = applyMiddleware(getRoomsInfo)(createStore);
-const store = createStoreWithMiddleware(reducer);
+import getBest from "./middlewares/getBest-middle";
+import register from './middlewares/register-middle';
+
+// const createStoreWithMiddleware = applyMiddleware(getBest)(createStore);
+const store = createStoreWithMiddleware(reducer); 
 
 
 render(
