@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import Header from "../components/Header";
 import BestCommend from "../containers/bestRecommend";
+import Login from '../components/login';
 
 class App extends Component {
   render() {
@@ -8,6 +9,7 @@ class App extends Component {
       <div>
         <Header/>
         <BestCommend/>
+        <Login/>
       </div>
     );
   }

@@ -3,13 +3,15 @@ const bodyParser = require('body-parser');
 
 const app = new express();
 
-const hello = require('./server/routers/best-recommend');
+const bestRecommend = require('./server/routers/best-recommend');
+const insertUsers = require('./server/routers/register-router');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('./public'));
 
-app.use('/', hello);
+app.use('/', insertUsers);
+app.use('/',bestRecommend);
 
 var server = app.listen(3000, function () {
   console.log('listening at port %s', server.address().port);

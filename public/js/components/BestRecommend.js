@@ -5,7 +5,6 @@ class BestRecommend extends React.Component {
     this.props.onGetBest();
   }
 
-
   render() {
     return <div>
       <RecommendRoom id={this.props.id}/>
