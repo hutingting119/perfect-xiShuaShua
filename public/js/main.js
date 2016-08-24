@@ -18,7 +18,7 @@ render(
     <Router history={hashHistory}>
       <Route path="/" component={App}>
         {/*<IndexRoute component={register}/>*/}
-        <Route path="/register" component = {ReserveRoom}/>
+        <Route path="/reserveRoom" component = {ReserveRoom}/>
       </Route>
     </Router>
   </Provider>, document.getElementById('app'));
