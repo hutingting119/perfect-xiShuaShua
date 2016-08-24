@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import {Router,Route,Link} from 'react-router'
 
 class BestRecommend extends React.Component {
   componentDidMount() {
@@ -35,7 +36,9 @@ class RecommendTime extends React.Component {
 class Reserve extends React.Component {
   render() {
     return <div className="col-md-6">
-      <button className="btn best-button btn-lg btn-info center-block" onClick={this.props.onReserve}>预约</button>
+      <Link to="/bestReserve">
+      <button className="btn best-button btn-lg btn-info center-block" >预约</button>
+        </Link>
     </div>
   }
 }

@@ -7,6 +7,7 @@ import App from "./containers/App";
 import reducer from "./reducers/reducer";
 import getBest from "./middlewares/getBest-middle";
 import register from './middlewares/register-middle';
+import BestReserveSuccess from './components/BestReserveSuccess';
 
 const createStoreWithMiddleware = applyMiddleware(getBest)(createStore);
 const store = createStoreWithMiddleware(reducer);
@@ -14,7 +15,7 @@ const store = createStoreWithMiddleware(reducer);
 render(
   <Provider store={store}>
     <Router history={hashHistory}>
-      <Route path="/" component={App}>
-      </Route>
+      <Route path="/" component={App}/>
+        <Route path="/bestReserve" component={BestReserveSuccess}/>
     </Router>
   </Provider>, document.getElementById('app'));

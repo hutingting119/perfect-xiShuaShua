@@ -9,7 +9,7 @@ class App extends Component {
       <div>
         <Header/>
         <BestCommend/>
-        <Login/>
+        {/*<Login/>*/}
       </div>
     );
   }
