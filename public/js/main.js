@@ -7,7 +7,7 @@ import App from "./containers/App";
 import reducer from "./reducers/reducer";
 // import register from './middlewares/register-middle';
 import ReserveRoom from "./components/ReserveRoom";
-import getRoomsInfo from "./middlewares/get-rooms-info"
+import getRoomsInfo from "./middlewares/getRoomsInfo-middle"
 
 const createStoreWithMiddleware = applyMiddleware(getRoomsInfo)(createStore);
 import getBest from "./middlewares/getBest-middle";
