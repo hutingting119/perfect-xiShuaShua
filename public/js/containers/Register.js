@@ -15,8 +15,6 @@ const mapDispatchPropps = (dispatch) => {
   }
 };
 
-
-
 export default connect(()=>{return {}}, mapDispatchPropps)(Register);
 
 
