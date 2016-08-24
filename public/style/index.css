@@ -1,0 +1,82 @@
+body {
+  overflow-x: hidden;
+}
+.header {
+  height: 50px;
+  background-color: deepskyblue;
+  color: #ffffff;
+  font-size: 1.2em;
+}
+
+.header span {
+  line-height: 50px;
+}
+
+.register {
+  margin-top: 35px;
+}
+
+.registerFont{
+  color: #31b0d5;
+  margin-top: 35px;
+  font-style: italic;
+}
+
+.email, .password, .repeatPassword {
+  margin-top: 30px
+}
+
+.my-bg {
+  height: 50px;
+  line-height: 50px;
+  font-size: 1.2em;
+}
+
+.my-write {
+  background-color: #fff;
+}
+
+.my-bottom {
+  margin-bottom: 5px;
+}
+
+.my-height {
+  padding-top: 5px;
+}
+
+.my-top {
+  margin-top: 5px;
+}
+
+.my-padding {
+  padding: 15px;
+}
+
+.my-write {
+  background-color: #fff;
+}
+
+.container > header h1,
+.container > header h2 {
+  color: black;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.7);
+}
+
+
+.myUsers,.myEmail,.myPassword,.myRepeatPassword,.registerButton {
+  width: 250px;
+}
+.registerButton{
+  margin-top: 20px;
+}
+.hasAccount{
+  margin-top: 20px;
+}
+small{
+  color:goldenrod;
+  opacity: 0.8;
+  position: absolute;
+  margin-left:-120px;
+  padding-top: 8px;
+}
+

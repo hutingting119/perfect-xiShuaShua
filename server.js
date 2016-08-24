@@ -3,15 +3,17 @@ const bodyParser = require('body-parser');
 
 const app = new express();
 
-const hello = require('./server/routers/hello-world');
+const insertUsers = require('./server/routers/register-router');
+const reserveRoom = require('./server/routers/reserve-room');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('./public'));
 
-app.use('/', hello);
+app.use('/', insertUsers);
+app.use('/',reserveRoom);
 
-var server = app.listen(3000, function () {
+var server = app.listen(3001, function () {
   console.log('listening at port %s', server.address().port);
 });
 

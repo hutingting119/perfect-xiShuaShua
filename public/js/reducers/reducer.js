@@ -1,18 +1,13 @@
-function reducer(state = {rooms:[]}, action) {
-    switch (action.type) {
-        case "GETTVALUE":
-            return {
-                rooms: ''
-            };
-
-        case '' :
-            return {
-                rooms: action.value,
-
-            }
+function reducer(state = {rooms: []}, action) {
+  switch (action.type) {
+    case 'GETABLEROOMS' :
+      return {
+        rooms: action.value,
+      };
+    case 'REGIST': {
+      alert(action.status);
     }
-    console.log(action.value);
-    return state;
+  }
+  return state;
 }
-
 module.exports = reducer;
