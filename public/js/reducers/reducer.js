@@ -1,16 +1,17 @@
-function reducer(state = {value: ''}, action) {
+function reducer(state = {rooms:[]}, action) {
     switch (action.type) {
         case "GETTVALUE":
             return {
-                value: action.value
+                rooms: ''
             };
 
-        case "GETABLEROOMS" :
+        case '' :
             return {
-                value: action.value
+                rooms: action.value,
+
             }
     }
-
+    console.log(action.value);
     return state;
 }
 

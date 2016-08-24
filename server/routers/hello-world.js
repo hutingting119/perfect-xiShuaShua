@@ -1,5 +1,5 @@
 const findData = require('../dbs/find-from-db');
-const getAbleRooms = require('../dbs/get-able-rooms-db');
+const getRoomsInfo = require('../dbs/get-rooms-info-db');
 
 const express = require('express');
 
@@ -11,8 +11,8 @@ router.get('/hello', (req, res)=> {
     });
 });
 
-router.get('/ableRooms', (req, res) => {
-    getAbleRooms((result) => {
+router.get('/roomsInfo', (req, res) => {
+    getRoomsInfo((result) => {
         res.json(result);
     })
 });

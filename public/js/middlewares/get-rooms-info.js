@@ -1,10 +1,10 @@
 import request from 'superagent';
 
 export default store => next => action => {
-    if (action.type === 'GETTVALUE') {
-        request.get('/hello')
+    if (action.type === 'GETABLEROOMS') {
+        request.get('/roomsInfo')
             .end((err, res) => {
-                next({type: action.type, value: res.body})
+                next({type: 'GETABLEROOMS', value: res.body})
             });
     }
     else
