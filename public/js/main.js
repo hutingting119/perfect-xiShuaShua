@@ -9,12 +9,12 @@ import reducer from "./reducers/reducer";
 import ReserveRoom from "./components/ReserveRoom";
 import getRoomsInfo from "./middlewares/getRoomsInfo-middle"
 
-const createStoreWithMiddleware = applyMiddleware(getRoomsInfo)(createStore);
+// const createStoreWithMiddleware = applyMiddleware(getRoomsInfo)(createStore);
 import getBest from "./middlewares/getBest-middle";
 import register from './middlewares/register-middle';
 import BestReserveSuccess from './components/BestReserveSuccess';
 
-// const createStoreWithMiddleware = applyMiddleware(getBest)(createStore);
+const createStoreWithMiddleware = applyMiddleware(getBest)(createStore);
 const store = createStoreWithMiddleware(reducer);
 
 
@@ -22,7 +22,8 @@ render(
   <Provider store={store}>
     <Router history={hashHistory}>
       <Route path="/" component={App}/>
-        {/*<IndexRoute component={register}/>*/}
-        <Route path="/reserveRoom" component = {ReserveRoom}/>
+      {/*<IndexRoute component={register}/>*/}
+      <Route path="/reserveRoom" component={ReserveRoom}/>
+      <Route path="/bestReserve" component={BestReserveSuccess}/>
     </Router>
   </Provider>, document.getElementById('app'));
