@@ -7,7 +7,7 @@ function getRoomsInfo(callback) {
         collection.find({}).toArray(function (err, result) {
             const ableRooms = [];
             result.map(item => {
-                const rooms = item.room;
+                const rooms = item.timePeriod;
                 const isAble = rooms.some((room) => {
                     const time = new Date().getHours();
                     const theTime = room.time.split(':');

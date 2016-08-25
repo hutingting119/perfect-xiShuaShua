@@ -6,7 +6,6 @@ const router = express.Router();
 
 router.get('/roomsInfo', (req, res) => {
     getRoomsInfo((result) => {
-      console.log(result);
         res.json(result);
     })
 });

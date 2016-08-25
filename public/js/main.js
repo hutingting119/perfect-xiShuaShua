@@ -14,7 +14,7 @@ import BestReserveSuccess from './components/BestReserveSuccess';
 import App from "./containers/App";
 import reducer from "./reducers/reducer";
 
-const createStoreWithMiddleware = applyMiddleware(getRoomsInfo)(createStore);
+const createStoreWithMiddleware = applyMiddleware(register, getBest, getRoomsInfo)(createStore);
 const store = createStoreWithMiddleware(reducer);
 
 render(

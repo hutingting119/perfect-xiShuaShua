@@ -26,4 +26,7 @@ export default store=> next=> action => {
         });
     }
   }
+  else {
+    next(action);
+  }
 }
