@@ -7,7 +7,7 @@ Register.PropTypes = {
   onAdd: PropTypes.func.isRequied,
 };
 
-const mapDispatchPropps = (dispatch) => {
+const mapDispatchProps = (dispatch) => {
   return {
     onAdd: (userName, email, password, repeatPassword)=> {
       dispatch({type: "REGIST", userName, email, password, repeatPassword});
@@ -15,7 +15,7 @@ const mapDispatchPropps = (dispatch) => {
   }
 };
 
-export default connect(()=>{return {}}, mapDispatchPropps)(Register);
+export default connect(()=>{return {}}, mapDispatchProps)(Register);
 
 
 

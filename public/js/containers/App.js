@@ -1,8 +1,5 @@
 import React, {Component} from "react";
-import ReserveRooms from "./ReserveRoom"
-import Header from "../components/Header";
-import BestCommend from "./BestRecommend";
-import Login from '../components/login';
+
 
 class App extends Component {
 
@@ -10,13 +7,7 @@ class App extends Component {
 
     return (
       <div>
-        <ReserveRooms/>
-        {/*<Header/>*/}
-        {/*<BestCommend/>*/}
-        {/*<ReserveRooms/>*/}
-        <Header/>
-        <BestCommend/>
-        {/*<Login/>*/}
+        {this.props.children}
       </div>
     );
   }
