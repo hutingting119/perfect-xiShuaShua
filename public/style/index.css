@@ -11,6 +11,16 @@ body {
 .header span {
   line-height: 50px;
 }
+.best-room {
+  background-color: #fff;
+  margin-top: 90px;
+}
+.best-time {
+  margin-top: 20px;
+}
+.best-button {
+  margin-top: 150px;
+}
 
 .register {
   margin-top: 35px;
@@ -25,6 +35,43 @@ body {
 .email, .password, .repeatPassword {
   margin-top: 30px
 }
+
+.my-bg {
+  height: 50px;
+  line-height: 50px;
+  font-size: 1.2em;
+}
+
+.my-write {
+  background-color: #fff;
+}
+
+.my-bottom {
+  margin-bottom: 5px;
+}
+
+.my-height {
+  padding-top: 5px;
+}
+
+.my-top {
+  margin-top: 5px;
+}
+
+.my-padding {
+  padding: 15px;
+}
+
+.my-write {
+  background-color: #fff;
+}
+
+.container > header h1,
+.container > header h2 {
+  color: black;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.7);
+}
+
 
 .myUsers,.myEmail,.myPassword,.myRepeatPassword,.registerButton {
   width: 250px;

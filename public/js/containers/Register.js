@@ -8,7 +8,10 @@ Register.PropTypes = {
 };
 
 const mapDispatchProps = (dispatch) => {
+<<<<<<< HEAD
 
+=======
+>>>>>>> fbd9472d3d508cb35dc31051d83763089be50f95
   return {
     onAdd: (userName, email, password, repeatPassword)=> {
       dispatch({type: "REGIST", userName, email, password, repeatPassword});
@@ -16,8 +19,11 @@ const mapDispatchProps = (dispatch) => {
   }
 };
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> fbd9472d3d508cb35dc31051d83763089be50f95
 export default connect(()=>{return {}}, mapDispatchProps)(Register);
 
 
