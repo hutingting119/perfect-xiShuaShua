@@ -12,17 +12,12 @@ function reducer(state = {id: 0, time: 0, rooms: []}, action) {
 
     case 'REGIST': {
       alert(action.status);
-<<<<<<< HEAD
       }
     case 'LOGIN':{
       console.log(action.status);
       alert(action.status);
     }
-=======
->>>>>>> fbd9472d3d508cb35dc31051d83763089be50f95
     }
-  }
-
   return state;
 }
 module.exports = reducer;
