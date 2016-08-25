@@ -6,18 +6,15 @@ import {Router, Route, IndexRoute, hashHistory} from 'react-router';
 import App from "./containers/App";
 import reducer from "./reducers/reducer";
 
-// import register from './middlewares/register-middle';
 import getRoomsInfo from "./middlewares/getRoomsInfo-middle"
+// import register from './middlewares/register-middle';
+import getBest from "./middlewares/getBestRoom-middle";
 import register from "./components/Register";
 import ReserveTime from "./components/ReserveTime"
-const createStoreWithMiddleware = applyMiddleware(getRoomsInfo)(createStore);
-// import register from './middlewares/register-middle';
-// const createStoreWithMiddleware = applyMiddleware(getRoomsInfo)(createStore);
-
 import ReserveRoom from "./components/ReserveRoom";
-import getBest from "./middlewares/getBestRoom-middle";
 import BestReserveSuccess from './components/BestReserveSuccess';
 
+const createStoreWithMiddleware = applyMiddleware(getRoomsInfo)(createStore);
 // const createStoreWithMiddleware = applyMiddleware(getBest)(createStore);
 const store = createStoreWithMiddleware(reducer);
 
