@@ -1,11 +1,6 @@
 import React, {Component, PropTypes} from "react";
 import {connect} from "react-redux";
-import BestCommend from "../components/BestRecommend";
-
-
-BestCommend.propTypes = {
-  onReserve: PropTypes.func.isRequired
-};
+import BestRecommend from "../components/BestRecommend";
 
 const mapStateToProps = (state)=> {
   return {
@@ -22,4 +17,4 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(BestCommend);
+export default connect(mapStateToProps, mapDispatchToProps)(BestRecommend);
