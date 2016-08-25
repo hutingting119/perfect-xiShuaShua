@@ -5,13 +5,14 @@ import BestCommend from "../containers/bestRecommend";
 import Login from '../components/login';
 
 class App extends Component {
+
   render() {
     return (
       <div>
         <ReserveRooms/>
-        <Header/>
-        <BestCommend/>
-        <Login/>
+        {/*<Header/>*/}
+        {/*<BestCommend/>*/}
+        {/*<Login/>*/}
       </div>
     );
   }

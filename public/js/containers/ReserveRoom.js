@@ -4,20 +4,19 @@ import ReserveRoom from "../components/ReserveRoom";
 
 const mapStateToProps = (state)=> {
   return {
-    rooms: state.rooms
+    rooms: state.rooms,
   }
 };
 
 const mapDispatchToProps = (dispatch) => {
 
   return {
-    onGetRooms:(text) => {
+    onGetRooms: (text) => {
       dispatch({
-        type : "GET_ABLE_ROOMS",
+        type: "GET_ABLE_ROOMS",
         text
       })
-
-    }
+    },
   }
 };
 

@@ -1,4 +1,4 @@
-function reducer(state = {id: 0, time: 0,rooms:[]}, action) {
+function reducer(state = {id: 0, time: 0, rooms: []}, action) {
   switch (action.type) {
     case "GET_BEST":
       return {
