@@ -1,5 +1,7 @@
 import React, {Component} from "react";
-import Login from '../components/login';
+import Login from '../containers/login';
+
+
 
 class App extends Component {
   render() {

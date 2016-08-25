@@ -3,6 +3,10 @@ function reducer(state = {value: ''}, action) {
     case 'REGIST': {
       alert(action.status);
       }
+    case 'LOGIN':{
+      console.log(action.status);
+      alert(action.status);
+    }
     }
 
   return state;
